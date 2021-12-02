@@ -1,6 +1,34 @@
+/* mixins, variables etc.. */
 
 $light-gray: #777;
 $gray: #555;
+$state-danger-text: red;
+
+@mixin box-sizing{
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+/* placeholder styling */
+
+::-webkit-input-placeholder {
+   font-style: italic;
+   font-size: 12px;
+}
+:-moz-placeholder {
+   font-style: italic;  
+   font-size: 12px;
+}
+::-moz-placeholder {
+   font-style: italic;  
+   font-size: 12px;
+}
+:-ms-input-placeholder {  
+   font-style: italic; 
+   font-size: 12px;
+}
+
 /* universal */
 
 
@@ -88,4 +116,69 @@ footer {
  } 
  
 }
+
+/*miscellaneous*/
+.debug_dump{
+  @include box-sizing;
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+
+}
+
+/* sidebar */
+
+aside{
+
+  section.user-info{
+    margin-top: 20px;
+  }
+
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation{
+  ul{
+    li{
+      color: #FF0000;
+    }
+    
+  }
+}
+
 
