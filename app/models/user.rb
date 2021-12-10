@@ -6,5 +6,13 @@ class User < ApplicationRecord
 								format: {with: VALIDATE_EMAIL_REGEX},
 								uniqueness: true
 	validates :password, presence: true, length: {minimum: 6}
-	has_secure_password										
+	has_secure_password			
+
+	#Creates a password digest for testing data in fixtures, users.yml
+	def User.digest(arg)
+		cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : 
+													  BCrypt::Engine.cost
+		BCrypt::Password.create(arg, cost: cost)
+									
+	end							
 end

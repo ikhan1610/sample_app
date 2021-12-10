@@ -29,6 +29,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'rexml', '~> 3.2', '>= 3.2.5'
 
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
