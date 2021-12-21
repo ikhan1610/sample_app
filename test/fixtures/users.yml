@@ -2,3 +2,4 @@ khan:
   name: Khan Immran
   email: khan.i@test.com
   password_digest: <%= User.digest('password') %>
+  

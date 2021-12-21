@@ -17,6 +17,13 @@
 			</div>
 
 			<div class="mb-3">
+				<%= form.label :remember_me, class: "checkbox inline" do %>
+					<%= form.check_box :remember_me %>
+					<span>Remeber me in the computer</span>
+				<% end %>
+			</div>
+
+			<div class="mb-3">
 				<%= form.submit "Log in", class: "btn btn-primary" %>
 			</div>
 		<% end %>
